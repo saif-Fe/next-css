@@ -1,4 +1,4 @@
-import classes from "./page.module.css";
+import classes from "./page.module.scss";
 export default function Home() {
   return (
     <main className={classes.main}>
@@ -7,10 +7,24 @@ export default function Home() {
         <div className={classes.placeholders}></div>
         <div className={classes.placeholders}></div>
       </div> */}
-
-      {/* <div className={classes.grid__areas}>
+      <div className={classes.box}>
+        <ul>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+        </ul>
+      </div>
+      <div className={classes.grid__areas}>
         <div className={`${classes.placeholders} ${classes.columnOne}`}>
-          One
+          <h1>One</h1>
         </div>
         <div className={`${classes.placeholders} ${classes.columnTwo}`}>
           Two
@@ -18,7 +32,7 @@ export default function Home() {
         <div className={`${classes.placeholders} ${classes.columnThree}`}>
           Three
         </div>
-      </div> */}
+      </div>
       {/* <div className={classes.grid__areas__dense}>
         <div className={classes.placeholders}>One</div>
         <div
@@ -28,7 +42,7 @@ export default function Home() {
           Two
         </div>
       </div> */}
-      <div
+      {/* <div
         className={classes.psuedo__elements}
         style={{
           "--bgi": `linear-gradient(to right, red 0 ${50}%, blue ${50}% 100%)`,
@@ -37,7 +51,7 @@ export default function Home() {
         <span className={classes.stepperOne}></span>
         <span className={classes.stepperTwo}></span>
         <span className={classes.stepperThree}></span>
-      </div>
+      </div> */}
     </main>
   );
 }

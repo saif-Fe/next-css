@@ -1,6 +1,13 @@
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Bold";
   src: url('/fonts/Montserrat/Montserrat-variable.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url('/fonts/Montserrat/Montserrat-variable.ttf');
+  font-weight: 400;
 }
 
 :root {}
@@ -17,8 +24,23 @@
 
 html,
 body {
-  font-family: Montserrat;
+  font-family: Montserrat-Regular;
 }
+
+h1 {
+
+  font-family: Montserrat-Bold;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
 
 body {}
 

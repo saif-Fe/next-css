@@ -1,3 +1,33 @@
+$color_global: local blue;
+$radius: 10px;
+$colors: cyan, pink, steelblue;
+
+@mixin border($radius: 10px, $color: blue, $circle: false) {
+  box-shadow: 0 0 0 10px $color;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  clip-path: ellipsis(50%);
+
+  // @each $color in $colors {
+  //   li.#{$color} {
+  //     background-color: $color;
+  //   }
+  // }
+
+  @for $i from 1 through 11 {
+    $plusOne : $i + 1;
+    $i: $i+2;
+
+    ul li:nth-child(#{$i}) {
+      background-color: cyan;
+    }
+  }
+}
+
 .main {
   padding: 1rem;
 }
@@ -111,5 +141,17 @@
   to {
 
     transform: translateY(100%);
+  }
+}
+
+.columnOne {
+  background: blue;
+}
+
+.grid__areas {
+  font: {
+    size: 2rem;
+    weight: 800;
+    style: italic;
   }
 }
