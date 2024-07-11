@@ -1,157 +1,25 @@
-$color_global: local blue;
-$radius: 10px;
-$colors: cyan, pink, steelblue;
-
-@mixin border($radius: 10px, $color: blue, $circle: false) {
-  box-shadow: 0 0 0 10px $color;
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  clip-path: ellipsis(50%);
-
-  // @each $color in $colors {
-  //   li.#{$color} {
-  //     background-color: $color;
-  //   }
-  // }
-
-  @for $i from 1 through 11 {
-    $plusOne : $i + 1;
-    $i: $i+2;
-
-    ul li:nth-child(#{$i}) {
-      background-color: cyan;
-    }
-  }
-}
-
 .main {
-  padding: 1rem;
-}
-
-.main>* {
-  margin-bottom: 1rem;
-}
-
-.grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 200px;
-  grid-auto-flow: row;
+  grid-template-columns: repeat(6, 300px);
   gap: 1rem;
+  grid-auto-flow: dense;
 }
 
-.grid__areas {
-  display: grid;
-  grid-template-areas:
-    "columnOne . columnThree columnThree"
-    "columnTwo columnTwo columnThree columnThree";
-  gap: 1rem;
-}
-
-.columnOne {
-  grid-area: columnOne;
-}
-
-.columnTwo {
-  grid-area: columnTwo;
-}
-
-.columnThree {
-  grid-area: columnThree;
-}
-
-.grid__areas__dense {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  justify-items: end;
-}
-
-.widthSmall {
-  width: 200px;
-}
-
-.placeholders {
-  background-color: #eee;
-  border: 2px solid #eee;
-  color: #222;
-  padding: 1rem;
+.smallBox,
+.medBox,
+.bigBox {
   height: 200px;
-  border-radius: 1rem;
+  background-color: aliceblue;
 }
 
-.psuedo__elements {
-  position: relative;
-  display: grid;
-  gap: 1rem;
-  height: 1000px;
-  width: 20px;
+.smallBox {
+  min-width: 200px;
 }
 
-.psuedo__elements::before {
-  content: '';
-  height: 100%;
-  width: 2px;
-  position: absolute;
-  margin-block: auto;
-  border: dashed #000;
-  border-width: 0 2px 0 0;
-  inset: 0;
-  margin-inline: auto;
+.medBox {
+  min-width: 350px;
 }
 
-.stepperOne,
-.stepperTwo,
-.stepperThree {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  border: 2px solid blue;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0px 20px #ffff;
-}
-
-.stepperOne {
-  animation: slideOut 1s ease-in alternate;
-}
-
-.stepperTwo {}
-
-.stepperThree {}
-
-@keyframes slideOut {
-  from {
-    transform: translateY(0%);
-  }
-
-  40% {
-    transform: translateY(10%);
-  }
-
-  70% {
-
-    transform: translateY(70%);
-  }
-
-  to {
-
-    transform: translateY(100%);
-  }
-}
-
-.columnOne {
-  background: blue;
-}
-
-.grid__areas {
-  font: {
-    size: 2rem;
-    weight: 800;
-    style: italic;
-  }
+.bigBox {
+  min-width: 450px;
 }

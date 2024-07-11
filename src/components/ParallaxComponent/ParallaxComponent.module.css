@@ -1,0 +1,20 @@
+.parallaxComponent {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	background-color: aliceblue;
+	z-index: 0;
+}
+
+.scrollElement {
+	position: absolute;
+	height: 400vh;
+	width: 100vw;
+	background-image: linear-gradient(to bottom, blue, red);
+	background-size: 100vw 200vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
